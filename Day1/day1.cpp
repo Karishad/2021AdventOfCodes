@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
-#include <string>
+#include <string.h>
 #include <array>
 
 using namespace std;
@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     fstream fs;
-    fs.open("day1.txt", fstream::out);
+    fs.open("day1.txt");
     int counter = 0;
     if (fs.is_open())
     {
@@ -17,7 +17,7 @@ int main()
         string current = "";
         while (getline(fs, current))
         {
-            if (strcomp(current, previous) > 0)
+            if (current.compare(previous) > 0)
             {
                 counter++;
             }
