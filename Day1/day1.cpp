@@ -13,15 +13,14 @@ int main()
     int counter = 0;
     if (fs.is_open())
     {
-        int previous = 0;
-        int current = 0;
-        while (true)
+        string previous = "";
+        string current = "";
+        while (getline(fs, current))
         {
-            fs >> current;
-            if (current > previous)
+            if (strcomp(current, previous) > 0)
+            {
                 counter++;
-            if (fs.eof())
-                break;
+            }
             previous = current;
         }
     }
