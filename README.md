@@ -6,5 +6,9 @@ Advent of Code (AOC) for 2021.
   - C++
 - Day 2
   - C++
- - Day 2.1
+ - Part 2
    - C++
+- Day 6
+  - C++
+- Day 21
+  - C++
